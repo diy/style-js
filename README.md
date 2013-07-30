@@ -13,6 +13,13 @@ someMethod('foo', function (err, obj) {
 });
 ```
 
+### Variable Naming
+
+#### Async
+
+`async.auto` task callbacks should use `(callback, [obj])` where `obj` represents the optional data object provided 
+to each task.
+
 ### Testing
 Automated testing is a must for any module engineered at DIY. The basic pattern is to use [JSHint](http://www.jshint.com/) and [Codebux](https://github.com/substack/codebux) for governance and then simply write short [tap-based](https://github.com/isaacs/node-tap) tests for each piece of functionality. DIY uses [Travis-CI](https://travis-ci.org) for continuous integration testing on both public and private repositories.
 
